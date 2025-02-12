@@ -8,8 +8,7 @@
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md",
-        "icon.png"
+        "README.md"
     ],
     "testFiles": [
         "test.ts"
