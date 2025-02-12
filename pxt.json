@@ -10,10 +10,12 @@
         "sensors/dht.ts",
         "sensors/lcd.ts",
         "sensors/sevenSegment.ts",
+        "sensors/ultrasonic.ts",
         "blocks/dht.ts",
         "blocks/lcd.ts",
         "blocks/servo360.ts",
         "blocks/sevenSegment.ts",
+        "blocks/ultrasonic.ts",
         "main.ts"
     ],
     "testFiles": [
