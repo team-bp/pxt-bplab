@@ -1,14 +1,15 @@
 {
     "name": "BPLAB",
     "version": "0.0.1",
-    "description": "",
+    "description": "makecode extensions created by BP Lab",
     "dependencies": {
         "core": "*"
     },
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "icon.png"
     ],
     "testFiles": [
         "test.ts"
