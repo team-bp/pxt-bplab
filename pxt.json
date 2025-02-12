@@ -6,9 +6,17 @@
         "core": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
-        "README.md"
+        "README.md",
+        "sensors/dht.ts",
+        "sensors/lcd.ts",
+        "sensors/sevenSegment.ts",
+        "sensors/ultrasonics.ts",
+        "blocks/dht.ts",
+        "blocks/lcd.ts",
+        "blocks/servo360.ts",
+        "blocks/sevenSegment.ts",
+        "blocks/ultrasonics.ts",
+        "main.ts"
     ],
     "testFiles": [
         "test.ts"
