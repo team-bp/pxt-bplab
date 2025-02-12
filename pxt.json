@@ -13,6 +13,7 @@
     "testFiles": [
         "test.ts"
     ],
+    "public": true,
     "targetVersions": {
         "target": "7.0.57",
         "targetId": "microbit"
@@ -21,5 +22,5 @@
         "microbit"
     ],
     "preferredEditor": "tsprj",
-    "icon": "https://raw.githubusercontent.com/bplab-dev/pxt-bplab/071e731644171a0a932ca2d891e917a8f817652d/icon.png"
+    "icon": "icon.png"
 }
