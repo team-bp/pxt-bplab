@@ -28,7 +28,7 @@ namespace BPLAB {
             pins.digitalWritePin(this.dio, 0);
             this._ON = 8;
             this.buf = pins.createBuffer(this.count);
-            this.clear();
+            // this.clear(); // 에러 나서 주석 처리했는데 확인 필요함
         }
 
         /**
