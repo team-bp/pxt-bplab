@@ -157,7 +157,7 @@ namespace BPLAB {
     //% color=#50A820
     //% weight=200 blockGap=8
     //% blockId="TM1637_create" block="CLK %clk|DIO %dio|intensity %intensity|LED count %count"
-    export function create(clk: DigitalPin, dio: DigitalPin, intensity: number, count: number): TM1637LEDs {
+    export function create(clk: DigitalPin, dio: DigitalPin, intensity: number, count: number): TM1637LEDsBlock {
         let tm = new TM1637LEDsBlock();
         tm.clk = clk;
         tm.dio = dio;
