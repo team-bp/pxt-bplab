@@ -167,32 +167,4 @@ namespace BPLAB {
         tm.init();
         return tm;
     }
-
-    /**
-     * create a TM1637 object.
-     * @param clk the CLK pin for TM1637, eg: DigitalPin.P1
-     * @param dio the DIO pin for TM1637, eg: DigitalPin.P2
-     * @param intensity the brightness of the LED, eg: 7
-     * @param count the count of the LED, eg: 4
-     */
-    //% group="7-Segment"
-    //% color=#50A820
-    //% weight=200 blockGap=8
-    //% blockId="TM1637_create2" block="CLK %clk|DIO %dio|intensity %intensity|LED count %count"
-    export function create2(clk: DigitalPin, dio: DigitalPin, intensity: number, count: number): TM1637LEDsBlock {
-        let tm = new TM1637LEDsBlock();
-        tm.clk = clk;
-        tm.dio = dio;
-        if ((count < 1) || (count > 5)) count = 4;
-        tm.count = count;
-        tm.brightness = intensity;
-        tm.init();
-        return tm;
-    }
-
-    //% group="7-Segment"
-    //% block="HELLO"
-    export function hello(){
-
-    }
 }
