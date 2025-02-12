@@ -28,52 +28,39 @@ namespace BPLAB {
             pins.digitalWritePin(this.dio, 0);
             this._ON = 8;
             this.buf = pins.createBuffer(this.count);
-            // this.clear(); // 에러 나서 주석 처리했는데 확인 필요함
-            // 위에서 주석처리한 한 줄 block 쪽에서 코드만 가져옴
+            this.clear();
+        }
+
+        clear(): void {
             for (let i = 0; i < this.count; i++) {
                 this._dat(i, 0)
                 this.buf[i] = 0
             }
         }
 
-        /**
-         * Start
-         */
         _start() {
             pins.digitalWritePin(this.dio, 0);
             pins.digitalWritePin(this.clk, 0);
         }
 
-        /**
-         * Stop
-         */
         _stop() {
             pins.digitalWritePin(this.dio, 0);
             pins.digitalWritePin(this.clk, 1);
             pins.digitalWritePin(this.dio, 1);
         }
 
-        /**
-         * send command1
-         */
         _write_data_cmd() {
             this._start();
             this._write_byte(TM1637_CMD1);
             this._stop();
         }
 
-        /**
-         * send command3
-         */
         _write_dsp_ctrl() {
             this._start();
             this._write_byte(TM1637_CMD3 | this._ON | this.brightness);
             this._stop();
         }
 
-        /**
-         * send a byte to 2-wire interface
-         */
         _write_byte(b: number) {
             for (let i = 0; i < 8; i++) {
                 pins.digitalWritePin(this.dio, (b >> i) & 1);
@@ -84,9 +71,6 @@ namespace BPLAB {
             pins.digitalWritePin(this.clk, 0);
         }
 
-        /**
-         * set data to TM1637, with given bit
-         */
         _dat(bit: number, dat: number) {
             this._write_data_cmd();
             this._start();
@@ -95,6 +79,5 @@ namespace BPLAB {
             this._stop();
             this._write_dsp_ctrl();
         }
-
     }
 }
