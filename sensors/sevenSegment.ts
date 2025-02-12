@@ -29,6 +29,11 @@ namespace BPLAB {
             this._ON = 8;
             this.buf = pins.createBuffer(this.count);
             // this.clear(); // 에러 나서 주석 처리했는데 확인 필요함
+            // 위에서 주석처리한 한 줄 block 쪽에서 코드만 가져옴
+            for (let i = 0; i < this.count; i++) {
+                this._dat(i, 0)
+                this.buf[i] = 0
+            }
         }
 
         /**
