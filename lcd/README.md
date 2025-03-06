@@ -55,6 +55,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
+  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
   lcd.showNumber(123, 0, 0)
   ```
 
@@ -72,6 +73,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
+  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
   lcd.showString('Hello', 0, 0)
   lcd.showString('World', 5, 1)
   ```
@@ -86,6 +88,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
+  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
   lcd.on()
   lcd.off()
   ```
@@ -100,6 +103,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
+  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
   lcd.clear()
   ```
 
@@ -113,6 +117,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
+  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
   lcd.backlightOn()
   lcd.backlightOff()
   ```
@@ -121,14 +126,15 @@ We sincerely appreciate the efforts of the original developers who created the f
 
 - 🔹 Description
 
-  - shl() → Shift LCD screen left (cmd(0x18))
-  - shr() → Shift the LCD screen to the right (cmd(0x1C))
+  - shiftLeft() → Shift LCD screen left (cmd(0x18))
+  - shiftRight() → Shift the LCD screen to the right (cmd(0x1C))
 
 - ✅ Usage example
 
   ```blocks
-  lcd.shl()
-  lcd.shr()
+  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
+  lcd.shiftLeft()
+  lcd.shiftRight()
   ```
 
 ## 📜 License
