@@ -1,34 +1,34 @@
 {
-    "name": "BPLAB",
-    "version": "0.0.17",
-    "description": "makecode extensions created by BP Lab",
-    "dependencies": {
-        "core": "*"
-    },
-    "files": [
-        "README.md",
-        "sensors/dht.ts",
-        "sensors/lcd.ts",
-        "sensors/sevenSegment.ts",
-        "sensors/ultrasonic.ts",
-        "blocks/dht.ts",
-        "blocks/lcd.ts",
-        "blocks/servo360.ts",
-        "blocks/sevenSegment.ts",
-        "blocks/ultrasonic.ts",
-        "main.ts"
-    ],
-    "testFiles": [
-        "test.ts"
-    ],
-    "public": true,
-    "targetVersions": {
-        "target": "7.0.57",
-        "targetId": "microbit"
-    },
-    "supportedTargets": [
-        "microbit"
-    ],
-    "preferredEditor": "tsprj",
-    "icon": "icon.png"
+  "name": "bplab",
+  "version": "0.0.17",
+  "description": "MakeCode extensions created by BP Lab",
+  "license": "MIT",
+  "dependencies": {
+    "core": "*"
+  },
+  "files": [
+    "README.md",
+    "lcd/README.md",
+    "seven-segment/README.md",
+    "ultrasonic/README.md",
+    "dht11/README.md",
+    "servo-360/README.md",
+    "soil-moisture/README.md",
+    "lcd/main.ts",
+    "seven-segment/main.ts",
+    "ultrasonic/main.ts",
+    "dht11/main.ts",
+    "servo-360/main.ts",
+    "soil-moisture/main.ts",
+    "main.ts"
+  ],
+  "testFiles": ["test.ts"],
+  "public": true,
+  "targetVersions": {
+    "target": "7.0.57",
+    "targetId": "microbit"
+  },
+  "supportedTargets": ["microbit"],
+  "preferredEditor": "tsprj",
+  "authors": ["BP Lab"]
 }
