@@ -2,7 +2,7 @@
  * I2C LCD 1602
  */
 namespace bplab {
-  namespace lcd {
+  export namespace lcd {
     let address: number; // 0x3F: PCF8574A, 0x27: PCF8574
     let backlightControlValue: number; // 8: ON, 0: OFF
     let registerSelectionValue: number; // 0: Command, 1: Data
