@@ -38,11 +38,11 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage examples
 
   ```blocks
-  bplab.lcdInit(bplab.I2CLCDAddress.PCF8574)
+  bplab.lcd.initialize(bplab.I2CLCDAddress.PCF8574)
   ```
 
   ```blocks
-  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
   ```
 
 ### 2. Number display block
@@ -55,8 +55,8 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
-  bplab.showNumber(123, 0, 0)
+  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.showNumber(123, 0, 0)
   ```
 
 ### 3. String display block
@@ -88,9 +88,9 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
-  bplab.on()
-  bplab.off()
+  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.on()
+  bplab.lcd.off()
   ```
 
 ### 5. Screen clear block
@@ -103,8 +103,8 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
-  bplab.clear()
+  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.clear()
   ```
 
 ### 6. Backlight ON/OFF block
@@ -117,9 +117,9 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
-  bplab.backlightOn()
-  bplab.backlightOff()
+  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.backlightOn()
+  bplab.lcd.backlightOff()
   ```
 
 ### 7. Screen Shift block
@@ -132,9 +132,9 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
-  bplab.shiftLeft()
-  bplab.shiftRight()
+  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.shiftLeft()
+  bplab.lcd.shiftRight()
   ```
 
 ## 📜 License
