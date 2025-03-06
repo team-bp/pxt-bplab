@@ -1,3 +1,5 @@
+> [back to main](./README.md)
+
 # LCD Extension for MakeCode
 
 ![LCD Image](./icon.png)
@@ -42,7 +44,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   ```
 
   ```blocks
-  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
   ```
 
 ### 2. Number display block
@@ -55,7 +57,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
   bplab.lcd.showNumber(123, 0, 0)
   ```
 
@@ -88,7 +90,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
   bplab.lcd.on()
   bplab.lcd.off()
   ```
@@ -103,7 +105,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
   bplab.lcd.clear()
   ```
 
@@ -117,7 +119,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
   bplab.lcd.backlightOn()
   bplab.lcd.backlightOff()
   ```
@@ -132,7 +134,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
   bplab.lcd.shiftLeft()
   bplab.lcd.shiftRight()
   ```
