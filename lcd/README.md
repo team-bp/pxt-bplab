@@ -73,9 +73,9 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
-  bplab.showString('Hello', 0, 0)
-  bplab.showString('World', 5, 1)
+  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
+  bplab.lcd.showString('Hello', 0, 0)
+  bplab.lcd.showString('World', 5, 1)
   ```
 
 ### 4. LCD ON/OFF block
