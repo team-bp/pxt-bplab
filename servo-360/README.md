@@ -29,7 +29,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  servo360.spinOneWay(servo360.ServoPin.P1)
+  bplab.servo360.spinOneWay(servo360.ServoPin.P1)
   ```
 
 ### 2. Spin Other Way Block
@@ -42,7 +42,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  servo360.spinOtherWay(servo360.ServoPin.P1)
+  bplab.servo360.spinOtherWay(servo360.ServoPin.P1)
   ```
 
 ### 3. Spin One Way With Speed Block
@@ -56,7 +56,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  servo360.spinOneWayWithSpeed(servo360.ServoPin.P1, 75)
+  bplab.servo360.spinOneWayWithSpeed(servo360.ServoPin.P1, 75)
   ```
 
 ### 4. Spin Other Way With Speed Block
@@ -70,7 +70,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  servo360.spinOtherWayWithSpeed(servo360.ServoPin.P1, 25)
+  bplab.servo360.spinOtherWayWithSpeed(servo360.ServoPin.P1, 25)
   ```
 
 ### 5. Turn Off Motor Block
@@ -83,7 +83,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  servo360.turnOffMotor(servo360.ServoPin.P1)
+  bplab.servo360.turnOffMotor(servo360.ServoPin.P1)
   ```
 
 ## 📜 License

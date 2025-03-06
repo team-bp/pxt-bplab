@@ -38,9 +38,13 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  let ms = ultrasonic.ping(DigitalPin.P14, DigitalPin.P15, ultrasonic.PingUnit.MicroSeconds)
-  let cm = ultrasonic.ping(DigitalPin.P14, DigitalPin.P15, ultrasonic.PingUnit.Centimeters)
-  let inches = ultrasonic.ping(DigitalPin.P14, DigitalPin.P15, ultrasonic.PingUnit.Inches)
+  let ms = bplab.ultrasonic.ping(DigitalPin.P14, DigitalPin.P15, bplab.ultrasonic.PingUnit.MicroSeconds)
+  let cm = bplab.ultrasonic.ping(DigitalPin.P14, DigitalPin.P15, bplab.ultrasonic.PingUnit.Centimeters)
+  let inches = bplab.ultrasonic.ping(DigitalPin.P14, DigitalPin.P15, bplab.ultrasonic.PingUnit.Inches)
+
+  basic.showNumber(ms)
+  basic.showNumber(cm)
+  basic.showNumber(inches)
   ```
 
 ## 🔧 How it works

@@ -28,8 +28,8 @@ This extension allows you to easily measure soil moisture levels using an LM393-
 - ✅ Usage example
 
   ```blocks
-  let raw = soilMoisture.soilMoistureValue(soilMoisture.SoilMoisturePin.P0, soilMoisture.ValueType.RAW)
-  let percentage = soilMoisture.soilMoistureValue(soilMoisture.SoilMoisturePin.P0, soilMoisture.ValueType.PERCENTAGE)
+  let raw = bplab.soilMoisture.soilMoistureValue(bplab.soilMoisture.SoilMoisturePin.P0, bplab.soilMoisture.ValueType.RAW)
+  let percentage = bplab.soilMoisture.soilMoistureValue(bplab.soilMoisture.SoilMoisturePin.P0, bplab.soilMoisture.ValueType.PERCENTAGE)
 
   basic.showNumber(raw)
   basic.showNumber(percentage)

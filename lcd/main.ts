@@ -1,7 +1,7 @@
-/**
- * I2C LCD 1602
- */
 namespace bplab {
+  /**
+   * I2C LCD 1602
+   */
   //% subcategory="LCD" weight=1 color=#0fbc11 icon="\uf26c"
   export namespace lcd {
     let address: number; // 0x3F: PCF8574A, 0x27: PCF8574
