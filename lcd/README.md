@@ -38,11 +38,11 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage examples
 
   ```blocks
-  lcd.lcdInit(lcd.I2CLCDAddress.PCF8574)
+  bplab.lcdInit(bplab.I2CLCDAddress.PCF8574)
   ```
 
   ```blocks
-  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
+  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
   ```
 
 ### 2. Number display block
@@ -55,8 +55,8 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
-  lcd.showNumber(123, 0, 0)
+  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
+  bplab.showNumber(123, 0, 0)
   ```
 
 ### 3. String display block
@@ -73,9 +73,9 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
-  lcd.showString('Hello', 0, 0)
-  lcd.showString('World', 5, 1)
+  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
+  bplab.showString('Hello', 0, 0)
+  bplab.showString('World', 5, 1)
   ```
 
 ### 4. LCD ON/OFF block
@@ -88,9 +88,9 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
-  lcd.on()
-  lcd.off()
+  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
+  bplab.on()
+  bplab.off()
   ```
 
 ### 5. Screen clear block
@@ -103,8 +103,8 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
-  lcd.clear()
+  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
+  bplab.clear()
   ```
 
 ### 6. Backlight ON/OFF block
@@ -117,9 +117,9 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
-  lcd.backlightOn()
-  lcd.backlightOff()
+  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
+  bplab.backlightOn()
+  bplab.backlightOff()
   ```
 
 ### 7. Screen Shift block
@@ -132,9 +132,9 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  lcd.lcdInit(lcd.I2CLCDAddress.AutoDetect)
-  lcd.shiftLeft()
-  lcd.shiftRight()
+  bplab.lcdInit(bplab.I2CLCDAddress.AutoDetect)
+  bplab.shiftLeft()
+  bplab.shiftRight()
   ```
 
 ## 📜 License
