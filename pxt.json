@@ -1,34 +1,40 @@
 {
-  "name": "bplab",
-  "version": "0.0.17",
-  "description": "MakeCode extensions created by BP Lab",
-  "license": "MIT",
-  "dependencies": {
-    "core": "*"
-  },
-  "files": [
-    "README.md",
-    "lcd/README.md",
-    "seven-segment/README.md",
-    "ultrasonic/README.md",
-    "dht11/README.md",
-    "servo-360/README.md",
-    "soil-moisture/README.md",
-    "lcd/main.ts",
-    "seven-segment/main.ts",
-    "ultrasonic/main.ts",
-    "dht11/main.ts",
-    "servo-360/main.ts",
-    "soil-moisture/main.ts",
-    "main.ts"
-  ],
-  "testFiles": ["test.ts"],
-  "public": true,
-  "targetVersions": {
-    "target": "7.0.57",
-    "targetId": "microbit"
-  },
-  "supportedTargets": ["microbit"],
-  "preferredEditor": "tsprj",
-  "authors": ["BP Lab"]
+    "name": "bplab",
+    "version": "0.0.17",
+    "description": "MakeCode extensions created by BP Lab",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "lcd/README.md",
+        "seven-segment/README.md",
+        "ultrasonic/README.md",
+        "dht11/README.md",
+        "servo-360/README.md",
+        "soil-moisture/README.md",
+        "lcd/main.ts",
+        "seven-segment/main.ts",
+        "ultrasonic/main.ts",
+        "dht11/main.ts",
+        "servo-360/main.ts",
+        "soil-moisture/main.ts",
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "targetVersions": {
+        "target": "7.0.57",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj",
+    "authors": [
+        "BP Lab"
+    ]
 }
