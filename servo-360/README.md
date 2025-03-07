@@ -1,3 +1,5 @@
+> [👈 Back](../README.md)
+
 # Servo 360 Extension for MakeCode
 
 ![Servo Image](./icon.png)
@@ -29,7 +31,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.servo360.spinOneWay(servo360.ServoPin.P1)
+  bplab.servo360.spinOneWay(bplab.servo360.ServoPin.P1)
   ```
 
 ### 2. Spin Other Way Block
@@ -42,7 +44,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.servo360.spinOtherWay(servo360.ServoPin.P1)
+  bplab.servo360.spinOtherWay(bplab.servo360.ServoPin.P1)
   ```
 
 ### 3. Spin One Way With Speed Block
@@ -83,7 +85,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.servo360.turnOffMotor(servo360.ServoPin.P1)
+  bplab.servo360.turnOffMotor(bplab.servo360.ServoPin.P1)
   ```
 
 ## 📜 License
@@ -107,3 +109,5 @@ Visit our websites:
 - for PXT/microbit
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
+> [👈 Back](../README.md)

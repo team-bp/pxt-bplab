@@ -110,10 +110,11 @@ namespace bplab {
      * @param address LCD i2c address, eg: 0, 39, 63. 0 for auto detection
      */
     //% subcategory="LCD" weight=1 color=#0fbc11 icon="\uf26c"
-    //% blockId="bp_lcd_set_address" block="LCD initialize with address %addr"
+    //% blockId="bp_lcd_initialize" block="LCD initialize with address %addr"
     //% weight=100 blockGap=8
-    //% defl=0
-    export function initialize(address: I2CLCDAddress) {
+    export function initialize(
+      address: I2CLCDAddress = I2CLCDAddress.AutoDetect
+    ): void {
       if (address == 0) address = _autoDetectAddress();
       else address = address;
       backlightControlValue = 8;
@@ -138,7 +139,7 @@ namespace bplab {
      * @param y LCD row position, eg: 0
      */
     //% subcategory="LCD" weight=1 color=#0fbc11 icon="\uf26c"
-    //% blockId="bp_lcd_show_number" block="Show number %n|at x %x|y %y"
+    //% blockId="bp_lcd_show_number" block="show number %n|at x %x|y %y"
     //% weight=90 blockGap=8
     //% x.min=0 x.max=15
     //% y.min=0 y.max=1

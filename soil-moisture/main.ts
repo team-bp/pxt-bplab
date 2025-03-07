@@ -36,8 +36,8 @@ namespace bplab {
     //% tooltip="Reads the soil moisture level from sensor connected to the specified analog pin"
     //% pin.fieldEditor="gridpicker"
     export function soilMoistureValue(
-      pin: SoilMoisturePin,
-      valueType: ValueType
+      pin: SoilMoisturePin = SoilMoisturePin.P0,
+      valueType: ValueType = ValueType.PERCENTAGE
     ): number {
       // Read analog value
       let moisture = pins.analogReadPin(pin);

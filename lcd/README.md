@@ -1,4 +1,4 @@
-> [back to main](./README.md)
+> [👈 Back](../README.md)
 
 # LCD Extension for MakeCode
 
@@ -40,7 +40,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage examples
 
   ```blocks
-  bplab.lcd.initialize(bplab.I2CLCDAddress.PCF8574)
+  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.PCF8574)
   ```
 
   ```blocks
@@ -160,3 +160,5 @@ Visit our websites:
 - for PXT/microbit
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
+> [👈 Back](../README.md)

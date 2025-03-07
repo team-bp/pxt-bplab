@@ -23,7 +23,7 @@ namespace bplab {
      * @param unit Desired conversion unit
      */
     //% subcategory="Ultrasonic" color="#2c3e50" weight=1 icon="\uf2ce"
-    //% blockId=sonar_ping block="Ultrasonic measurement|trig %trig|echo %echo|Unit %unit"
+    //% blockId="bp_ultrasonic_ping" block="ultrasonic measurement|trig %trig|echo %echo|unit %unit"
     //% tooltip="Measures the distance to an object using an ultrasonic sensor."
     //% inlineInputMode=external
     //% trig.fieldEditor="gridpicker"

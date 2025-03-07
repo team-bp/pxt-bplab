@@ -1,3 +1,5 @@
+> [👈 Back](../README.md)
+
 # DHT11 Extension for MakeCode
 
 ![DHT11 Image](./icon.png)
@@ -50,6 +52,10 @@ We sincerely appreciate the efforts of the original developers who created the f
   let tempC = bplab.dht11.dht11value(DigitalPin.P0, dht11.DHT11Type.temperatureC)
   let tempF = bplab.dht11.dht11value(DigitalPin.P0, dht11.DHT11Type.temperatureF)
   let humidity = bplab.dht11.dht11value(DigitalPin.P0, dht11.DHT11Type.humidity)
+
+  basic.showNumber(tempC)
+  basic.showNumber(tempF)
+  basic.showNumber(humidity)
   ```
 
 ## 📜 License
@@ -73,3 +79,5 @@ Visit our websites:
 - for PXT/microbit
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
+> [👈 Back](../README.md)

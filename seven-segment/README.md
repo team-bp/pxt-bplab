@@ -1,3 +1,5 @@
+> [👈 Back](../README.md)
+
 # 7-Segment Display Extension for MakeCode
 
 ![7-Segment Image](./icon.png)
@@ -85,7 +87,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 
   ```blocks
   let tm = bplab.sevenSegment.create(DigitalPin.P12, DigitalPin.P13, 7, 4)
-  tm.showbit(5, 0)
+  tm.showBit(5, 0)
   ```
 
 ### 5. Show Decimal Point Block
@@ -99,7 +101,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 
   ```blocks
   let tm = bplab.sevenSegment.create(DigitalPin.P12, DigitalPin.P13, 7, 4)
-  tm.showDP(true)
+  tm.showColons(true)
   ```
 
 ### 6. Set Intensity Block
@@ -166,3 +168,5 @@ Visit our websites:
 - for PXT/microbit
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
+> [👈 Back](../README.md)

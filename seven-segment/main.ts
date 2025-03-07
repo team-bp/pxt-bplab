@@ -19,14 +19,14 @@ namespace bplab {
       buf: Buffer;
       clk: DigitalPin;
       dio: DigitalPin;
-      _ON: number;
+      ledOn: number;
       brightness: number;
       count: number; // number of LEDs
 
-      init(): void {
+      initialize(): void {
         pins.digitalWritePin(this.clk, 0);
         pins.digitalWritePin(this.dio, 0);
-        this._ON = 8;
+        this.ledOn = 8;
         this.buf = pins.createBuffer(this.count);
         this.clear();
       }
@@ -42,7 +42,7 @@ namespace bplab {
         pins.digitalWritePin(this.dio, 1);
       }
 
-      _write_data_cmd() {
+      _writeDataCommand() {
         this._start();
         this._write_byte(TM1637_CMD1);
         this._stop();
@@ -50,7 +50,7 @@ namespace bplab {
 
       _write_dsp_ctrl() {
         this._start();
-        this._write_byte(TM1637_CMD3 | this._ON | this.brightness);
+        this._write_byte(TM1637_CMD3 | this.ledOn | this.brightness);
         this._stop();
       }
 
@@ -66,20 +66,20 @@ namespace bplab {
 
       /**
        * set TM1637 intensity, range is [0-8], 0 is off.
-       * @param val the brightness of the TM1637, eg: 7
+       * @param value the brightness of the TM1637, eg: 7
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
-      //% blockId="TM1637_set_intensity" block="%tm|set intensity %val"
+      //% blockId="bp_7segment_set_intensity" block="%tm|set intensity %val"
       //% weight=50 blockGap=8
-      intensity(val: number = 7) {
-        if (val < 1) {
+      intensity(value: number = 7) {
+        if (value < 1) {
           this.off();
           return;
         }
-        if (val > 8) val = 8;
-        this._ON = 8;
-        this.brightness = val - 1;
-        this._write_data_cmd();
+        if (value > 8) value = 8;
+        this.ledOn = 8;
+        this.brightness = value - 1;
+        this._writeDataCommand();
         this._write_dsp_ctrl();
       }
 
@@ -87,7 +87,7 @@ namespace bplab {
        * set data to TM1637, with given bit
        */
       _dat(bit: number, dat: number) {
-        this._write_data_cmd();
+        this._writeDataCommand();
         this._start();
         this._write_byte(TM1637_CMD2 | bit % this.count);
         this._write_byte(dat);
@@ -101,9 +101,9 @@ namespace bplab {
        * @param bit the position of the LED, eg: 0
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
-      //% blockId="TM1637_showbit" block="%tm|show digit %num |at %bit"
+      //% blockId="bp_7segment_show_bit" block="%tm|show digit %num |at %bit"
       //% weight=90 blockGap=8
-      showbit(num: number = 5, bit: number = 0) {
+      showBit(num: number = 5, bit: number = 0) {
         this.buf[bit % this.count] = _SEGMENTS[num % 16];
         this._dat(bit, _SEGMENTS[num % 16]);
       }
@@ -113,16 +113,16 @@ namespace bplab {
        * @param num is a number, eg: 0
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
-      //% blockId="TM1637_shownum" block="%tm|show number %num"
+      //% blockId="bp_7segment_show_num" block="%tm|show number %num"
       //% weight=91 blockGap=8
-      showNumber(num: number) {
+      showNumber(num: number = 0) {
         if (num < 0) {
           this._dat(0, 0x40); // '-'
           num = -num;
-        } else this.showbit(Math.idiv(num, 1000) % 10);
-        this.showbit(num % 10, 3);
-        this.showbit(Math.idiv(num, 10) % 10, 2);
-        this.showbit(Math.idiv(num, 100) % 10, 1);
+        } else this.showBit(Math.idiv(num, 1000) % 10);
+        this.showBit(num % 10, 3);
+        this.showBit(Math.idiv(num, 10) % 10, 2);
+        this.showBit(Math.idiv(num, 100) % 10, 1);
       }
 
       /**
@@ -130,16 +130,16 @@ namespace bplab {
        * @param num is a hex number, eg: 0
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
-      //% blockId="TM1637_showhex" block="%tm|show hex number %num"
+      //% blockId="bp_7segment_show_hex" block="%tm|show hex number %num"
       //% weight=90 blockGap=8
-      showHex(num: number) {
+      showHex(num: number = 0) {
         if (num < 0) {
           this._dat(0, 0x40); // '-'
           num = -num;
-        } else this.showbit((num >> 12) % 16);
-        this.showbit(num % 16, 3);
-        this.showbit((num >> 4) % 16, 2);
-        this.showbit((num >> 8) % 16, 1);
+        } else this.showBit((num >> 12) % 16);
+        this.showBit(num % 16, 3);
+        this.showBit((num >> 4) % 16, 2);
+        this.showBit((num >> 8) % 16, 1);
       }
 
       /**
@@ -147,9 +147,9 @@ namespace bplab {
        * @param show is show/hide dp, eg: true
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
-      //% blockId="TM1637_showDP" block="%tm|DotPoint show %show"
+      //% blockId="bp_7segment_show_colons" block="%tm|colons(:) show %show"
       //% weight=70 blockGap=8
-      showDP(show: boolean = true) {
+      showColons(show: boolean = true) {
         let bit = 1;
         bit = bit % this.count;
         if (show) this._dat(bit, this.buf[bit] | 0x80);
@@ -160,7 +160,7 @@ namespace bplab {
        * clear LED.
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
-      //% blockId="TM1637_clear" block="clear %tm"
+      //% blockId="bp_7segment_clear" block="clear %tm"
       //% weight=80 blockGap=8
       clear() {
         for (let i = 0; i < this.count; i++) {
@@ -173,11 +173,11 @@ namespace bplab {
        * turn on LED.
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
-      //% blockId="TM1637_on" block="turn on %tm"
+      //% blockId="bp_7segment_on" block="turn on %tm"
       //% weight=86 blockGap=8
       on() {
-        this._ON = 8;
-        this._write_data_cmd();
+        this.ledOn = 8;
+        this._writeDataCommand();
         this._write_dsp_ctrl();
       }
 
@@ -185,11 +185,11 @@ namespace bplab {
        * turn off LED.
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
-      //% blockId="TM1637_off" block="turn off %tm"
+      //% blockId="bp_7segment_off" block="turn off %tm"
       //% weight=85 blockGap=8
       off() {
-        this._ON = 0;
-        this._write_data_cmd();
+        this.ledOn = 0;
+        this._writeDataCommand();
         this._write_dsp_ctrl();
       }
     }
@@ -203,7 +203,7 @@ namespace bplab {
      */
     //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
     //% weight=200 blockGap=8
-    //% blockId="TM1637_create" block="CLK %clk|DIO %dio|intensity %intensity|LED count %count"
+    //% blockId="bp_7segment_create" block="CLK %clk|DIO %dio|intensity %intensity|LED count %count"
     //% intensity.min=0 intensity.max=7
     //% count.min=1 count.max=4
     //% clk.fieldEditor="gridpicker"
@@ -212,8 +212,8 @@ namespace bplab {
     export function create(
       clk: DigitalPin = DigitalPin.P12,
       dio: DigitalPin = DigitalPin.P13,
-      intensity: number,
-      count: number
+      intensity: number = 7,
+      count: number = 4
     ): TM1637LEDs {
       let tm = new TM1637LEDs();
       tm.clk = clk;
@@ -221,7 +221,7 @@ namespace bplab {
       if (count < 1 || count > 5) count = 4;
       tm.count = count;
       tm.brightness = intensity;
-      tm.init();
+      tm.initialize();
       return tm;
     }
   }

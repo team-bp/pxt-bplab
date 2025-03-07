@@ -21,8 +21,8 @@ namespace bplab {
      * @param pin Which pin the motor is on
      */
     //% subcategory="Servo 360" color=#03aa74 weight=1 icon="\uf2f1"
-    //% blockId=spinOneWay weight=100
-    //% block="Spin one way pin %pin"
+    //% blockId="bp_servo_spin_one_way" weight=100
+    //% block="spin one way pin %pin"
     //% pin.fieldEditor="gridpicker"
     export function spinOneWay(pin = ServoPin.P1): void {
       pins.servoWritePin(pin, 180);
@@ -33,8 +33,8 @@ namespace bplab {
      * @param pin Which pin the motor is on
      */
     //% subcategory="Servo 360" color=#03aa74 weight=1 icon="\uf2f1"
-    //% blockId=spinOtherWay weight=80
-    //% block="Spin other way pin %pin"
+    //% blockId="bp_servo_spin_other_way" weight=80
+    //% block="spin other way pin %pin"
     //% pin.fieldEditor="gridpicker"
     export function spinOtherWay(pin = ServoPin.P1): void {
       pins.servoWritePin(pin, 0);
@@ -46,8 +46,8 @@ namespace bplab {
      * @param speed Speed from 0 to 100
      */
     //% subcategory="Servo 360" color=#03aa74 weight=1 icon="\uf2f1"
-    //% blockId=spinOneWayWithSpeed weight=60
-    //% block="Spin one way pin %pin | with speed %speed"
+    //% blockId="bp_servo_spin_one_way_with_speed" weight=60
+    //% block="spin one way pin %pin | with speed %speed"
     //% speed.min=0 speed.max=100
     //% pin.fieldEditor="gridpicker"
     export function spinOneWayWithSpeed(pin = ServoPin.P1, speed = 50): void {
@@ -61,8 +61,8 @@ namespace bplab {
      * @param speed Speed from 0 to 100
      */
     //% subcategory="Servo 360" color=#03aa74 weight=1 icon="\uf2f1"
-    //% blockId=spinOtherWayWithSpeed weight=40
-    //% block="Spin other way pin %pin | with speed %speed"
+    //% blockId="bp_servo_spin_other_way_with_speed" weight=40
+    //% block="spin other way pin %pin | with speed %speed"
     //% speed.min=0 speed.max=100
     //% pin.fieldEditor="gridpicker"
     export function spinOtherWayWithSpeed(pin = ServoPin.P1, speed = 50): void {
@@ -75,8 +75,8 @@ namespace bplab {
      * @param pin Which pin the motor is on
      */
     //% subcategory="Servo 360" color=#03aa74 weight=1 icon="\uf2f1"
-    //% blockId=turnOffMotor weight=20
-    //% block="Turn off motor at pin %pin"
+    //% blockId="bp_servo_turn_off_motor" weight=20
+    //% block="turn off motor at pin %pin"
     //% pin.fieldEditor="gridpicker"
     export function turnOffMotor(pin = ServoPin.P1): void {
       pins.digitalWritePin(pin, 0);
