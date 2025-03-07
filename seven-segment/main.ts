@@ -4,9 +4,9 @@ namespace bplab {
    */
   //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
   export namespace sevenSegment {
-    let TM1637_CMD1 = 0x40; // Transfer data in auto-increase mode
-    let TM1637_CMD2 = 0xc0; // Write data to a specific place (address)
-    let TM1637_CMD3 = 0x80; // Display ON/OFF and Brightness Settings
+    let CMD1 = 0x40; // Transfer data in auto-increase mode
+    let CMD2 = 0xc0; // Write data to a specific place (address)
+    let CMD3 = 0x80; // Display ON/OFF and Brightness Settings
     let _SEGMENTS = [
       0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x77, 0x7c,
       0x39, 0x5e, 0x79, 0x71
@@ -44,13 +44,13 @@ namespace bplab {
 
       _writeDataCommand() {
         this._start();
-        this._write_byte(TM1637_CMD1);
+        this._write_byte(CMD1);
         this._stop();
       }
 
       _write_dsp_ctrl() {
         this._start();
-        this._write_byte(TM1637_CMD3 | this.ledOn | this.brightness);
+        this._write_byte(CMD3 | this.ledOn | this.brightness);
         this._stop();
       }
 
@@ -65,8 +65,8 @@ namespace bplab {
       }
 
       /**
-       * set TM1637 intensity, range is [0-8], 0 is off.
-       * @param value the brightness of the TM1637, eg: 7
+       * set 7-Segment intensity, range is [0-8], 0 is off.
+       * @param value the brightness of the 7-Segment, eg: 7
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_set_intensity" block="%tm|set intensity %val"
@@ -84,12 +84,12 @@ namespace bplab {
       }
 
       /**
-       * set data to TM1637, with given bit
+       * set data to 7-Segment, with given bit
        */
       _dat(bit: number, dat: number) {
         this._writeDataCommand();
         this._start();
-        this._write_byte(TM1637_CMD2 | bit % this.count);
+        this._write_byte(CMD2 | bit % this.count);
         this._write_byte(dat);
         this._stop();
         this._write_dsp_ctrl();
@@ -143,8 +143,8 @@ namespace bplab {
       }
 
       /**
-       * show or hide dot point.
-       * @param show is show/hide dp, eg: true
+       * show or hide colons(:).
+       * @param show is show/hide colons(:), eg: true
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_show_colons" block="%tm|colons(:) show %show"
@@ -195,9 +195,9 @@ namespace bplab {
     }
 
     /**
-     * create a TM1637 object.
-     * @param clk the CLK pin for TM1637, eg: DigitalPin.P12
-     * @param dio the DIO pin for TM1637, eg: DigitalPin.P13
+     * create a 7-Segment object.
+     * @param clk the CLK pin for 7-Segment, eg: DigitalPin.P12
+     * @param dio the DIO pin for 7-Segment, eg: DigitalPin.P13
      * @param intensity the brightness of the LED, eg: 7
      * @param count the count of the LED, eg: 4
      */
