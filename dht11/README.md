@@ -49,9 +49,9 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage examples
 
   ```blocks
-  let tempC = bplab.dht11.dht11value(DigitalPin.P0, dht11.DHT11Type.temperatureC)
-  let tempF = bplab.dht11.dht11value(DigitalPin.P0, dht11.DHT11Type.temperatureF)
-  let humidity = bplab.dht11.dht11value(DigitalPin.P0, dht11.DHT11Type.humidity)
+  let tempC = bplab.dht11.dht11value(DigitalPin.P0, dht11.DHT11Type.TemperatureC)
+  let tempF = bplab.dht11.dht11value(DigitalPin.P0, dht11.DHT11Type.TemperatureF)
+  let humidity = bplab.dht11.dht11value(DigitalPin.P0, dht11.DHT11Type.Humidity)
 
   basic.showNumber(tempC)
   basic.showNumber(tempF)

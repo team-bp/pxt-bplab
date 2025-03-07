@@ -57,7 +57,6 @@ We sincerely appreciate the efforts of the original developers who created the f
   ```blocks
   let tm = bplab.sevenSegment.create(DigitalPin.P12, DigitalPin.P13, 7, 4)
   tm.showNumber(1234)
-  tm.showNumber(-123)
   ```
 
 ### 3. Show Hex Number Block
@@ -72,7 +71,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 
   ```blocks
   let tm = bplab.sevenSegment.create(DigitalPin.P12, DigitalPin.P13, 7, 4)
-  tm.showHex(0xABCD)
+  tm.showHex(0x0)
   ```
 
 ### 4. Show Digit Block
