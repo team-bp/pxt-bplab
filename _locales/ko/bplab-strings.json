@@ -32,7 +32,7 @@
   "bplab.sevenSegment.TM1637LEDs.showColons|block": "7세그먼트 %tm 콜론(:) 표시하기 %show",
   "bplab.sevenSegment.TM1637LEDs.showHex|block": "7세그먼트 %tm hex 숫자 %num 표시하기",
   "bplab.sevenSegment.TM1637LEDs.showNumber|block": "7세그먼트 %tm 숫자 %num 표시하기",
-  "bplab.sevenSegment.create|block": "7세그먼트 CLK %clk|DIO %dio|밝기 %intensity|LED 개수 %count",
+  "bplab.sevenSegment.create|block": "7세그먼트 설정하기|CLK %clk|DIO %dio|밝기 %intensity|LED 개수 %count",
   "bplab.soilMoisture.SoilMoisturePin.P0|block": "P0",
   "bplab.soilMoisture.SoilMoisturePin.P1|block": "P1",
   "bplab.soilMoisture.SoilMoisturePin.P2|block": "P2",
