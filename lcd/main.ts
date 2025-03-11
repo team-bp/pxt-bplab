@@ -107,14 +107,14 @@ namespace bplab {
 
     /**
      * Initialize LCD and set I2C address. PCF8574/PCF8574A address is 39/63
-     * @param address LCD i2c address, eg: 0, 39, 63. 0 for auto detection
+     * @param address LCD i2c address
      */
     //% subcategory="LCD" weight=1 color=#0fbc11 icon="\uf26c"
     //% blockId="bp_lcd_initialize" block="LCD initialize with address %addr"
     //% weight=100 blockGap=8
-    //% %defl=I2CLCDAddress.AutoDetect
+    //% addr.defl=I2CLCDAddress.PCF8574
     export function initialize(
-      address: I2CLCDAddress = I2CLCDAddress.AutoDetect
+        address: I2CLCDAddress = I2CLCDAddress.PCF8574
     ): void {
       if (address == 0) address = _autoDetectAddress();
       else address = address;
