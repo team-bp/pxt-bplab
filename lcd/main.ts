@@ -112,8 +112,8 @@ namespace bplab {
         //% subcategory="LCD" weight=1 color=#0fbc11 icon="\uf26c"
         //% blockId="bp_lcd_initialize" block="LCD initialize with address %addr"
         //% weight=100 blockGap=8
-        //% addr.defl=bplab.lcd.I2CLCDAddress.PCF8574
-        export function initialize(addr: I2CLCDAddress = I2CLCDAddress.PCF8574): void {
+        //% addr.defl=bplab.lcd.I2CLCDAddress.AutoDetect
+        export function initialize(addr: I2CLCDAddress = I2CLCDAddress.AutoDetect): void {
             if (addr == 0) address = _autoDetectAddress();
             else address = addr;
             backlightControlValue = 8;
