@@ -17,7 +17,7 @@ This extension allows you to easily measure soil moisture levels using an LM393-
 
 ## Blocks
 
-### Soil Moisture Value Block
+### Soil Moisture Value Block #soilmoisture-soilmoisturevalue
 
 - 🔹 Description
 

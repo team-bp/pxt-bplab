@@ -23,7 +23,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 
 ## Blocks
 
-### 1. Create Display Block
+### 1. Create Display Block #sevensegment-create
 
 - 🔹 Description
 
@@ -44,7 +44,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   let tm = bplab.sevenSegment.create(DigitalPin.P12, DigitalPin.P13, 7, 4)
   ```
 
-### 2. Show Number Block
+### 2. Show Number Block #sevensegment-tm1637leds-shownumber
 
 - 🔹 Description
 
@@ -59,7 +59,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   tm.showNumber(1234)
   ```
 
-### 3. Show Hex Number Block
+### 3. Show Hex Number Block #sevensegment-tm1637leds-showhex
 
 - 🔹 Description
 
@@ -74,7 +74,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   tm.showHex(0x0)
   ```
 
-### 4. Show Digit Block
+### 4. Show Digit Block #sevensegment-tm1637leds-showbit
 
 - 🔹 Description
 
@@ -89,12 +89,11 @@ We sincerely appreciate the efforts of the original developers who created the f
   tm.showBit(5, 0)
   ```
 
-### 5. Show Decimal Point Block
+### 5. Show Colons Block #sevensegment-tm1637leds-showcolons
 
 - 🔹 Description
 
-  - Shows or hides decimal point at specified position
-  - Does not affect the displayed digit
+  - Shows or hides colons
 
 - ✅ Usage example
 
@@ -103,7 +102,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   tm.showColons(true)
   ```
 
-### 6. Set Intensity Block
+### 6. Set Intensity Block #sevensegment-tm1637leds-intensity
 
 - 🔹 Description
 
@@ -117,7 +116,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   tm.intensity(5)
   ```
 
-### 7. Clear Display Block
+### 7. Clear Display Block #sevensegment-tm1637leds-clear
 
 - 🔹 Description
 
@@ -131,7 +130,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   tm.clear()
   ```
 
-### 8. Display ON/OFF Blocks
+### 8. Display ON/OFF Blocks #sevensegment-tm1637leds-on #sevensegment-tm1637leds-off
 
 - 🔹 Description
 

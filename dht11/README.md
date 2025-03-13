@@ -20,7 +20,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 
 ## Blocks
 
-### 1. DHT11 Value Block
+### 1. DHT11 Value Block #dht11-dht11value #dht11-dht11value
 
 - 🔹 Description
 

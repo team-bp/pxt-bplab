@@ -21,7 +21,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 
 ## Blocks
 
-### 1. Spin One Way Block
+### 1. Spin One Way Block #servo360-spinoneway
 
 - 🔹 Description
 
@@ -34,7 +34,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   bplab.servo360.spinOneWay(bplab.servo360.ServoPin.P1)
   ```
 
-### 2. Spin Other Way Block
+### 2. Spin Other Way Block #servo360-spinotherway
 
 - 🔹 Description
 
@@ -47,7 +47,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   bplab.servo360.spinOtherWay(bplab.servo360.ServoPin.P1)
   ```
 
-### 3. Spin One Way With Speed Block
+### 3. Spin One Way With Speed Block #servo360-spinonewaywithspeed
 
 - 🔹 Description
 
@@ -61,7 +61,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   bplab.servo360.spinOneWayWithSpeed(bplab.servo360.ServoPin.P1, 75)
   ```
 
-### 4. Spin Other Way With Speed Block
+### 4. Spin Other Way With Speed Block #servo360-spinotherwaywithspeed
 
 - 🔹 Description
 
@@ -75,7 +75,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   bplab.servo360.spinOtherWayWithSpeed(bplab.servo360.ServoPin.P1, 25)
   ```
 
-### 5. Turn Off Motor Block
+### 5. Turn Off Motor Block #servo360-turnoffmotor
 
 - 🔹 Description
 

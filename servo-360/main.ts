@@ -24,6 +24,7 @@ namespace bplab {
     //% blockId="bp_servo_spin_one_way" weight=100
     //% block="spin one way pin %pin"
     //% pin.fieldEditor="gridpicker"
+    //% help=github:pxt-bplab/servo-360/README#servo360-spinoneway
     export function spinOneWay(pin = ServoPin.P1): void {
       pins.servoWritePin(pin, 180);
     }
@@ -36,6 +37,7 @@ namespace bplab {
     //% blockId="bp_servo_spin_other_way" weight=80
     //% block="spin other way pin %pin"
     //% pin.fieldEditor="gridpicker"
+    //% help=github:pxt-bplab/servo-360/README#servo360-spinotherway
     export function spinOtherWay(pin = ServoPin.P1): void {
       pins.servoWritePin(pin, 0);
     }
@@ -50,6 +52,7 @@ namespace bplab {
     //% block="spin one way pin %pin | with speed %speed"
     //% speed.min=0 speed.max=100
     //% pin.fieldEditor="gridpicker"
+    //% help=github:pxt-bplab/servo-360/README#servo360-spinonewaywithspeed
     export function spinOneWayWithSpeed(pin = ServoPin.P1, speed = 50): void {
       let spin = (speed * 90) / 100 + 90;
       pins.servoWritePin(pin, spin);
@@ -65,6 +68,7 @@ namespace bplab {
     //% block="spin other way pin %pin | with speed %speed"
     //% speed.min=0 speed.max=100
     //% pin.fieldEditor="gridpicker"
+    //% help=github:pxt-bplab/servo-360/README#servo360-spinotherwaywithspeed
     export function spinOtherWayWithSpeed(pin = ServoPin.P1, speed = 50): void {
       let spin = 90 - (speed * 90) / 100;
       pins.servoWritePin(pin, spin);
@@ -78,6 +82,7 @@ namespace bplab {
     //% blockId="bp_servo_turn_off_motor" weight=20
     //% block="turn off motor at pin %pin"
     //% pin.fieldEditor="gridpicker"
+    //% help=github:pxt-bplab/servo-360/README#servo360-turnoffmotor
     export function turnOffMotor(pin = ServoPin.P1): void {
       pins.digitalWritePin(pin, 0);
     }

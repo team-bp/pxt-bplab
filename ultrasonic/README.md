@@ -21,7 +21,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 
 ## Blocks
 
-### 1. Ping Measurement Block
+### 1. Ping Measurement Block #ultrasonic-ping
 
 - 🔹 Description
 

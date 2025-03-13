@@ -28,6 +28,7 @@ namespace bplab {
     //% inlineInputMode=external
     //% trig.fieldEditor="gridpicker"
     //% echo.fieldEditor="gridpicker"
+    //% help=github:pxt-bplab/ultrasonic/README#ultrasonic-ping
     export function ping(
       trig: DigitalPin = DigitalPin.P14,
       echo: DigitalPin = DigitalPin.P15,

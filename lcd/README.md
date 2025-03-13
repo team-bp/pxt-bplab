@@ -20,7 +20,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 
 ## Blocks
 
-### 1. LCD Initialization Block
+### 1. LCD Initialization Block #lcd-initialize
 
 - 🔹 Description
 
@@ -47,7 +47,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
   ```
 
-### 2. Number display block
+### 2. Number display block #lcd-shownumber
 
 - 🔹 Description
 
@@ -61,7 +61,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   bplab.lcd.showNumber(123, 0, 0)
   ```
 
-### 3. String display block
+### 3. String display block #lcd-showstring
 
 - 🔹 Description
 
@@ -80,7 +80,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   bplab.lcd.showString('World', 5, 1)
   ```
 
-### 4. LCD ON/OFF block
+### 4. LCD ON/OFF block #lcd-on #lcd-off
 
 - 🔹 Description
 
@@ -95,7 +95,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   bplab.lcd.off()
   ```
 
-### 5. Screen clear block
+### 5. Screen clear block #lcd-clear
 
 - 🔹 Description
 
@@ -109,7 +109,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   bplab.lcd.clear()
   ```
 
-### 6. Backlight ON/OFF block
+### 6. Backlight ON/OFF block #lcd-backlighton #lcd-backlightoff
 
 - 🔹 Description
 
@@ -124,7 +124,7 @@ We sincerely appreciate the efforts of the original developers who created the f
   bplab.lcd.backlightOff()
   ```
 
-### 7. Screen Shift block
+### 7. Screen Shift block #lcd-shiftleft #lcd-shiftright
 
 - 🔹 Description
 

@@ -25,6 +25,7 @@ namespace bplab {
     //% blockId="bp_dht11" block="DHT11 pin %pin %valueType"
     //% tooltip="Reads the temperature or humidity from a DHT11 sensor connected to the specified pin."
     //% pin.fieldEditor="gridpicker"
+    //% help=github:pxt-bplab/dht11/README#dht11-dht11value
     export function dht11value(pin: DigitalPin, valueType: DHT11Type): number {
       const DHT11_TIMEOUT = 100;
       const buffer = pins.createBuffer(40);

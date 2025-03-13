@@ -35,6 +35,7 @@ namespace bplab {
     //% blockId="bp_soil_moisture" block="soil moisture pin %pin %valueType"
     //% tooltip="Reads the soil moisture level from sensor connected to the specified analog pin"
     //% pin.fieldEditor="gridpicker"
+    //% help=github:pxt-bplab/soil-moisture/README#soilmoisture-soilmoisturevalue
     export function soilMoistureValue(
       pin: SoilMoisturePin = SoilMoisturePin.P0,
       valueType: ValueType = ValueType.PERCENTAGE
