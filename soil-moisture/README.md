@@ -6,6 +6,8 @@
 
 This extension allows you to easily measure soil moisture levels using an LM393-based soil moisture sensor with the micro:bit.
 
+- product page link: [https://bplab-us.com/microbit#soilMoisture](https://bplab-us.com/microbit#soilMoisture)
+
 ## 🚀 Features
 
 - Easy reading of soil moisture levels with micro:bit

@@ -10,6 +10,8 @@ This extension is an enhanced version of the code originally developed under the
 
 We sincerely appreciate the efforts of the original developers who created the foundation for this extension.
 
+- product page link: [https://bplab-us.com/microbit#sevenSegment](https://bplab-us.com/microbit#sevenSegment)
+
 ## 🚀 Features
 
 - Easy control of TM1637 LED displays

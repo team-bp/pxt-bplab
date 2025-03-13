@@ -10,6 +10,8 @@ This extension is an enhanced version of the code originally developed under the
 
 We sincerely appreciate the efforts of the original developers who created the foundation for this extension.
 
+- product page link: [https://bplab-us.com/microbit#dht11](https://bplab-us.com/microbit#dht11)
+
 ## 🚀 Features
 
 - Easy to read temperature (°C/°F) and humidity values from DHT11 sensor
