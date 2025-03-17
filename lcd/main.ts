@@ -8,7 +8,7 @@ namespace bplab {
     let backlightControlValue: number; // 8: ON, 0: OFF
     let registerSelectionValue: number; // 0: Command, 1: Data
 
-    export enum I2CLCDAddress {
+    export enum LCDAddress {
       //% block="auto detect"
       AutoDetect = 0,
       //% block="PCF8574(0x27)"
@@ -107,18 +107,18 @@ namespace bplab {
 
     /**
      * Initialize LCD and set I2C address. PCF8574/PCF8574A address is 39/63
-     * @param address LCD i2c address
+     * @param lcdAddress LCD i2c address
      */
     //% subcategory="LCD" weight=1 color=#0fbc11 icon="\uf26c"
-    //% blockId="bp_lcd_initialize" block="LCD initialize with address %addr"
+    //% blockId="bp_lcd_initialize" block="LCD initialize with address %lcdAddress"
     //% weight=100 blockGap=8
-    //% addr.defl=bplab.lcd.I2CLCDAddress.AutoDetect
+    //% lcdAddress.defl=bplab.lcd.I2CLCDAddress.AutoDetect
     //% help=github:pxt-bplab/lcd/README#lcd-initialize
     export function initialize(
-      addr: I2CLCDAddress = I2CLCDAddress.AutoDetect
+      lcdAddress: LCDAddress = LCDAddress.AutoDetect
     ): void {
-      if (addr == 0) address = _autoDetectAddress();
-      else address = addr;
+      if (lcdAddress == 0) address = _autoDetectAddress();
+      else address = lcdAddress;
       backlightControlValue = 8;
       registerSelectionValue = 0;
 
