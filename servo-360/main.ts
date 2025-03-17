@@ -1,7 +1,7 @@
-/**
- * Servo 360
- */
 namespace bplab {
+  /**
+   * Servo 360
+   */
   //% subcategory="Servo 360" color=#03aa74 weight=1 icon="\uf2f1"
   export namespace servo360 {
     /**
