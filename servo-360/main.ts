@@ -27,6 +27,7 @@ namespace bplab {
     //% pin.defl=AnalogPin.P1
     //% help=github:pxt-bplab/servo-360/README#servo360-spinoneway
     export function spinOneWay(pin = ServoPin.P1): void {
+      if (pin === undefined) pin = ServoPin.P1;
       pins.servoWritePin(pin, 180);
     }
 
