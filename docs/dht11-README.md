@@ -2,7 +2,7 @@
 
 # DHT11 Extension for MakeCode
 
-![DHT11 Image](./icon.png)
+![DHT11 Image](./images/dht11-icon.png)
 
 This extension allows you to read temperature and humidity data from a DHT11 sensor with the micro:bit.
 

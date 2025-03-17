@@ -2,7 +2,7 @@
 
 # Soil Moisture Sensor with LM393 Extension for MakeCode
 
-![Soil Moisture Sensor Image](./icon.png)
+![Soil Moisture Sensor Image](./images/soil-moisture-icon.png)
 
 This extension allows you to easily measure soil moisture levels using an LM393-based soil moisture sensor with the micro:bit.
 

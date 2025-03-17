@@ -2,7 +2,7 @@
 
 # Servo 360 Extension for MakeCode
 
-![Servo Image](./icon.png)
+![Servo Image](./images/servo-360-icon.png)
 
 This extension allows you to control a 360-degree continuous rotation servo motor with the micro:bit.
 

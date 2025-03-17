@@ -2,7 +2,7 @@
 
 # 7-Segment Display Extension for MakeCode
 
-![7-Segment Image](./icon.png)
+![7-Segment Image](./images/seven-segment-icon.png)
 
 This extension allows you to control TM1637 based 4-digit 7-segment LED displays with the micro:bit.
 

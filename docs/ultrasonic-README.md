@@ -2,7 +2,7 @@
 
 # Ultrasonic Extension for MakeCode
 
-![Ultrasonic Image](./icon.png)
+![Ultrasonic Image](./images/ultrasonic-icon.png)
 
 This extension allows you to measure distances using an ultrasonic sensor with the micro:bit.
 

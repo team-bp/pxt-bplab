@@ -2,12 +2,12 @@
 
 ## Description of each block
 
-1. [LCD](./lcd/README.md)
-2. [7-Segment](./seven-segment/README.md)
-3. [Ultrasonic](./ultrasonic/README.md)
-4. [DHT11](./dht11/README.md)
-5. [Servo 360](./servo-360/README.md)
-6. [Soil Moisture](./soil-moisture/README.md)
+1. [LCD](./docs/lcd-README.md)
+2. [7-Segment](./docs/seven-segment-README.md)
+3. [Ultrasonic](./docs/ultrasonic-README.md)
+4. [DHT11](./docs/dht11-README.md)
+5. [Servo 360](./docs/servo-360-README.md)
+6. [Soil Moisture](./docs/soil-moisture-README.md)
 
 - product page link: [https://bplab-us.com/microbit](https://bplab-us.com/microbit)
 
