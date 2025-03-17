@@ -233,14 +233,14 @@ namespace bplab {
       intensity: number = 7,
       count: number = 4
     ): TM1637LEDs {
-      let sevenSegmentDisplay = new TM1637LEDs();
-      sevenSegmentDisplay.clk = clk;
-      sevenSegmentDisplay.dio = dio;
+      let _sevenSegmentDisplay = new TM1637LEDs();
+      _sevenSegmentDisplay.clk = clk;
+      _sevenSegmentDisplay.dio = dio;
       if (count < 1 || count > 5) count = 4;
-      sevenSegmentDisplay.count = count;
-      sevenSegmentDisplay.brightness = intensity;
-      sevenSegmentDisplay.initialize();
-      return sevenSegmentDisplay;
+      _sevenSegmentDisplay.count = count;
+      _sevenSegmentDisplay.brightness = intensity;
+      _sevenSegmentDisplay.initialize();
+      return _sevenSegmentDisplay;
     }
   }
 }
