@@ -217,7 +217,7 @@ namespace bplab {
     //% count.min=1 count.max=4
     //% clk.fieldEditor="gridpicker"
     //% dio.fieldEditor="gridpicker"
-    //% blockSetVariable=tm
+    //% blockSetVariable=sevenSegmentDisplay
     //% help=github:pxt-bplab/seven-segment/README#sevensegment-create
     export function create(
       clk: DigitalPin = DigitalPin.P12,
@@ -225,14 +225,14 @@ namespace bplab {
       intensity: number = 7,
       count: number = 4
     ): TM1637LEDs {
-      let tm = new TM1637LEDs();
-      tm.clk = clk;
-      tm.dio = dio;
+      let sevenSegment = new TM1637LEDs();
+      sevenSegment.clk = clk;
+      sevenSegment.dio = dio;
       if (count < 1 || count > 5) count = 4;
-      tm.count = count;
-      tm.brightness = intensity;
-      tm.initialize();
-      return tm;
+      sevenSegment.count = count;
+      sevenSegment.brightness = intensity;
+      sevenSegment.initialize();
+      return sevenSegment;
     }
   }
 }
