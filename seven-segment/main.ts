@@ -69,7 +69,7 @@ namespace bplab {
        * @param value the brightness of the 7-Segment, eg: 7
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
-      //% blockId="bp_7segment_set_intensity" block="sevenSegmentDisplay|set intensity %val"
+      //% blockId="bp_7segment_set_intensity" block="%sevenSegment|set intensity %val"
       //% weight=50 blockGap=8
       //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-intensity
       intensity(value: number = 7) {
