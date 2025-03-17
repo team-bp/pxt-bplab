@@ -1,4 +1,4 @@
-> Open this page at [https://bplab-dev.github.io/pxt-bplab/](https://bplab-dev.github.io/pxt-bplab/)
+# BP Lab Sensors
 
 ## Description of each block
 
