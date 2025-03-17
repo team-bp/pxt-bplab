@@ -112,7 +112,7 @@ namespace bplab {
     //% subcategory="LCD" weight=1 color=#0fbc11 icon="\uf26c"
     //% blockId="bp_lcd_initialize" block="LCD initialize with address %lcdAddress"
     //% weight=100 blockGap=8
-    //% lcdAddress.defl=bplab.lcd.I2CLCDAddress.AutoDetect
+    //% lcdAddress.defl=bplab.lcd.LCDAddress.AutoDetect
     //% help=github:pxt-bplab/lcd/README#lcd-initialize
     export function initialize(
       lcdAddress: LCDAddress = LCDAddress.AutoDetect
