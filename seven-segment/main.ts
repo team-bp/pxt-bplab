@@ -71,6 +71,7 @@ namespace bplab {
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_set_intensity" block="%sevenSegmentDisplay|set intensity %val"
       //% weight=50 blockGap=8
+      //% blockSetVariable=sevenSegmentDisplay
       //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-intensity
       intensity(value: number = 7) {
         if (value < 1) {
