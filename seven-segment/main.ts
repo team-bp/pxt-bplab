@@ -71,7 +71,7 @@ namespace bplab {
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_set_intensity" block="%tm|set intensity %val"
       //% weight=50 blockGap=8
-      //% tm.defl="sevenSegment"
+      //% tm.defl="sevenSegmentDisplay"
       //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-intensity
       intensity(value: number = 7) {
         if (value < 1) {
@@ -226,14 +226,14 @@ namespace bplab {
       intensity: number = 7,
       count: number = 4
     ): TM1637LEDs {
-      let sevenSegment = new TM1637LEDs();
-      sevenSegment.clk = clk;
-      sevenSegment.dio = dio;
+      let sevenSegmentDisplay = new TM1637LEDs();
+      sevenSegmentDisplay.clk = clk;
+      sevenSegmentDisplay.dio = dio;
       if (count < 1 || count > 5) count = 4;
-      sevenSegment.count = count;
-      sevenSegment.brightness = intensity;
-      sevenSegment.initialize();
-      return sevenSegment;
+      sevenSegmentDisplay.count = count;
+      sevenSegmentDisplay.brightness = intensity;
+      sevenSegmentDisplay.initialize();
+      return sevenSegmentDisplay;
     }
   }
 }
