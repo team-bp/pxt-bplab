@@ -69,9 +69,9 @@ namespace bplab {
        * @param value the brightness of the 7-Segment, eg: 7
        */
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
-      //% blockId="bp_7segment_set_intensity" block="%tm|set intensity %val"
+      //% blockId="bp_7segment_set_intensity" block="%sevenSegmentDisplay|set intensity %val"
       //% weight=50 blockGap=8
-      //% help=github:pxt-bplab/seven-segment/README#sevensegment-tm1637leds-intensity
+      //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-intensity
       intensity(value: number = 7) {
         if (value < 1) {
           this.off();
@@ -104,7 +104,7 @@ namespace bplab {
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_show_bit" block="%tm|show digit %num |at %bit"
       //% weight=90 blockGap=8
-      //% help=github:pxt-bplab/seven-segment/README#sevensegment-tm1637leds-showbit
+      //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-showbit
       showBit(num: number = 5, bit: number = 0) {
         this.buf[bit % this.count] = _SEGMENTS[num % 16];
         this._dat(bit, _SEGMENTS[num % 16]);
@@ -117,7 +117,7 @@ namespace bplab {
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_show_num" block="%tm|show number %num"
       //% weight=91 blockGap=8
-      //% help=github:pxt-bplab/seven-segment/README#sevensegment-tm1637leds-shownumber
+      //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-shownumber
       showNumber(num: number = 0) {
         if (num < 0) {
           this._dat(0, 0x40); // '-'
@@ -135,7 +135,7 @@ namespace bplab {
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_show_hex" block="%tm|show hex number %num"
       //% weight=90 blockGap=8
-      //% help=github:pxt-bplab/seven-segment/README#sevensegment-tm1637leds-showhex
+      //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-showhex
       showHex(num: number = 0) {
         if (num < 0) {
           this._dat(0, 0x40); // '-'
@@ -153,7 +153,7 @@ namespace bplab {
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_show_colons" block="%tm|colons(:) show %show"
       //% weight=70 blockGap=8
-      //% help=github:pxt-bplab/seven-segment/README#sevensegment-tm1637leds-showcolons
+      //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-showcolons
       //% show.defl=true
       showColons(show: boolean = true) {
         let bit = 1;
@@ -168,7 +168,7 @@ namespace bplab {
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_clear" block="clear %tm"
       //% weight=80 blockGap=8
-      //% help=github:pxt-bplab/seven-segment/README#sevensegment-tm1637leds-clear
+      //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-clear
       clear() {
         for (let i = 0; i < this.count; i++) {
           this._dat(i, 0);
@@ -182,7 +182,7 @@ namespace bplab {
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_on" block="turn on %tm"
       //% weight=86 blockGap=8
-      //% help=github:pxt-bplab/seven-segment/README#sevensegment-tm1637leds-on
+      //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-on
       on() {
         this.ledOn = 8;
         this._writeDataCommand();
@@ -195,7 +195,7 @@ namespace bplab {
       //% subcategory="7-Segment" weight=1 color=#5c68a6 icon="\uf25c"
       //% blockId="bp_7segment_off" block="turn off %tm"
       //% weight=85 blockGap=8
-      //% help=github:pxt-bplab/seven-segment/README#sevensegment-tm1637leds-off
+      //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-tm1637leds-off
       off() {
         this.ledOn = 0;
         this._writeDataCommand();
@@ -218,7 +218,7 @@ namespace bplab {
     //% clk.fieldEditor="gridpicker"
     //% dio.fieldEditor="gridpicker"
     //% blockSetVariable=sevenSegmentDisplay
-    //% help=github:pxt-bplab/seven-segment/README#sevensegment-create
+    //% help=github:pxt-bplab/docs/seven-segment-README#sevensegment-create
     export function create(
       clk: DigitalPin = DigitalPin.P12,
       dio: DigitalPin = DigitalPin.P13,
