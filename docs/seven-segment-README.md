@@ -6,7 +6,7 @@
 
 This extension allows you to control TM1637 based 4-digit 7-segment LED displays with the micro:bit.
 
-This extension is an enhanced version of the code originally developed under the MIT License by [makecode-extensions/TM1637](https://github.com/makecode-extensions/bplab.sevenSegment.git).
+This extension is an enhanced version of the code originally developed under the MIT License by [makecode-extensions/TM1637](https://github.com/makecode-extensions/TM1637.git).
 
 We sincerely appreciate the efforts of the original developers who created the foundation for this extension.
 
