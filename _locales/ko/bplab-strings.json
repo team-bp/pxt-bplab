@@ -9,7 +9,7 @@
   "bplab.lcd.backlightOff|block": "LCD 백라이트 끄기",
   "bplab.lcd.backlightOn|block": "LCD 백라이트 켜기",
   "bplab.lcd.clear|block": "LCD 내용 모두 지우기",
-  "bplab.lcd.initialize|block": "LCD 주소 초기화 %addr",
+  "bplab.lcd.initialize|block": "LCD 주소 초기화 %lcdAddress",
   "bplab.lcd.off|block": "LCD 끄기",
   "bplab.lcd.on|block": "LCD 켜기",
   "bplab.lcd.shiftLeft|block": "LCD 내용 왼쪽으로 이동하기",
