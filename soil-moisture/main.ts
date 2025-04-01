@@ -40,22 +40,35 @@ namespace bplab {
       pin: SoilMoisturePin = SoilMoisturePin.P0,
       valueType: ValueType = ValueType.PERCENTAGE
     ): number {
-      // Read analog value
-      let moisture = pins.analogReadPin(pin);
+        let max = 0;
+        let min = 0;
 
-      // Ensure the reading is within valid range
-      moisture = Math.constrain(moisture, 0, 1023);
+        if (control.hardwareVersion().slice(0, 1) !== "1") {
+            // V2
+            max = 590;
+            min = 325;
+        } else {
+            // V1
+            max = 1019;
+            min = 392;
+        }
 
-      switch (valueType) {
+        // Read analog value
+        let moisture = pins.analogReadPin(pin);
+
+        // Ensure the reading is within valid range
+        moisture = Math.constrain(moisture, 0, 1023);
+
+        switch (valueType) {
         case ValueType.RAW:
-          return moisture;
+            return moisture;
         case ValueType.PERCENTAGE:
-          // Convert to percentage (inverted as more moisture = lower resistance)
-          // Typically: Dry soil > 800, Water ~ 300
-          return Math.map(moisture, 1023, 300, 0, 100);
+            // Convert to percentage (inverted as more moisture = lower resistance)
+            // Typically: Dry soil > 800, Water ~ 300
+            return Math.map(moisture, max, min, 0, 100);
         default:
-          return 0;
-      }
+            return 0;
+        }
     }
   }
 }
