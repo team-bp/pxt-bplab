@@ -117,11 +117,11 @@ namespace bplab {
 
       switch (valueType) {
         case DHT11Type.TemperatureC:
-          return dht11Temperature;
+            return Math.round(dht11Temperature);
         case DHT11Type.TemperatureF:
-          return dht11Temperature * 1.8 + 32;
+            return Math.round(dht11Temperature * 1.8 + 32);
         case DHT11Type.Humidity:
-          return dht11Humidity;
+            return Math.round(dht11Humidity);
       }
     }
   }
