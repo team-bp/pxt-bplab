@@ -42,11 +42,11 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage examples
 
   ```blocks
-  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.PCF8574)
+  bplab.lcd.initialize(bplab.lcd.LCDAddress.PCF8574)
   ```
 
   ```blocks
-  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.LCDAddress.AutoDetect)
   ```
 
 ### 2. Number display block #lcd-shownumber
@@ -59,7 +59,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.LCDAddress.AutoDetect)
   bplab.lcd.showNumber(123, 0, 0)
   ```
 
@@ -77,7 +77,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.LCDAddress.AutoDetect)
   bplab.lcd.showString('Hello', 0, 0)
   bplab.lcd.showString('World', 5, 1)
   ```
@@ -92,7 +92,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.LCDAddress.AutoDetect)
   bplab.lcd.on()
   bplab.lcd.off()
   ```
@@ -107,7 +107,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.LCDAddress.AutoDetect)
   bplab.lcd.clear()
   ```
 
@@ -121,7 +121,7 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.LCDAddress.AutoDetect)
   bplab.lcd.backlightOn()
   bplab.lcd.backlightOff()
   ```
@@ -136,9 +136,22 @@ We sincerely appreciate the efforts of the original developers who created the f
 - ✅ Usage example
 
   ```blocks
-  bplab.lcd.initialize(bplab.lcd.I2CLCDAddress.AutoDetect)
+  bplab.lcd.initialize(bplab.lcd.LCDAddress.AutoDetect)
   bplab.lcd.shiftLeft()
   bplab.lcd.shiftRight()
+  ```
+
+### 8. Pad Blank block #lcd-padblank
+
+- 🔹 Description
+
+  - padBlank(value: number, digitLength: number) → Format a number as a string with left padding using spaces, so the total width matches the given digit length.
+
+- ✅ Usage example
+
+  ```blocks
+  bplab.lcd.initialize(bplab.lcd.LCDAddress.AutoDetect)
+  bplab.lcd.showString(bplab.lcd.padBlank(7, 4), 0, 0)
   ```
 
 ## 📜 License
