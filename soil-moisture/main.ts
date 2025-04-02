@@ -61,11 +61,11 @@ namespace bplab {
 
         switch (valueType) {
         case ValueType.RAW:
-            return moisture;
+            return Math.round(moisture);
         case ValueType.PERCENTAGE:
             // Convert to percentage (inverted as more moisture = lower resistance)
             // Typically: Dry soil > 800, Water ~ 300
-            return Math.map(moisture, max, min, 0, 100);
+            return Math.round(Math.map(moisture, max, min, 0, 100));
         default:
             return 0;
         }
