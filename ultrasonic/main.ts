@@ -49,11 +49,11 @@ namespace bplab {
 
       switch (unit) {
         case PingUnit.Centimeters:
-          return Math.idiv(d, 58);
+            return Math.round(Math.idiv(d, 58));
         case PingUnit.Inches:
-          return Math.idiv(d, 148);
+            return Math.round(Math.idiv(d, 148));
         default:
-          return d;
+            return Math.round(d);
       }
     }
   }
