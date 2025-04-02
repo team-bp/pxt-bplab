@@ -254,5 +254,28 @@ namespace bplab {
     export function shiftRight(): void {
       _sendCommand(LCDCommand.ShiftDisplayRight);
     }
+
+    function _repeatStr(s: string, count: number): string {
+        let result = "";
+        for (let i = 0; i < count; i++) result += s;
+        return result;
+    }
+
+    /**
+     * Display the input number on the specified number of screens
+     * @param value number to display, eg: 1
+     * @param digitLength specified number of screens, eg: 3
+     */
+    //% subcategory="LCD" weight=1 color=#0fbc11 icon="\uf26c"
+    //% blockId="bp_lcd_pad_blank" block="Format %value to %digitLength digits"
+    //% weight=90 blockGap=8
+    //% digitLength.min=1 digitLength.max=16
+    //% help=github:pxt-bplab/lcd/README#lcd-padblank
+    export function padBlank(value: number, digitLength: number): string {
+        const str = value.toString();
+        const padding = _repeatStr(" ", Math.max(0, digitLength - str.length));
+
+        return padding + str;
+    }
   }
 }
