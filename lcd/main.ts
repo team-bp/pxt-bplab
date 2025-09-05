@@ -36,7 +36,7 @@ namespace bplab {
     // LCD register setup
     function _setRegister(data: number) {
       pins.i2cWriteNumber(address, data, NumberFormat.Int8LE);
-      basic.pause(1);
+      basic.pause(5);
     }
 
     // Send data through I2C bus
