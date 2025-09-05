@@ -105,6 +105,20 @@ namespace bplab {
       else return 0; // No device found
     }
 
+    // Auto detect LCD address (단순화 버전)
+    function _autoDetectAddressSimple(): number {
+        const candidates = [0x27, 0x3F];
+        for (let addr of candidates) {
+            try {
+                pins.i2cWriteNumber(addr, 0, NumberFormat.Int8LE);
+                return addr; // 쓰기 성공하면 해당 주소 사용
+            } catch (e) {
+                // 실패하면 다음 주소 시도
+            }
+        }
+        return 0; // 찾지 못함
+    }
+
     /**
      * Initialize LCD and set I2C address. PCF8574/PCF8574A address is 39/63
      * @param lcdAddress LCD i2c address
@@ -117,7 +131,7 @@ namespace bplab {
     export function initialize(
       lcdAddress: LCDAddress = LCDAddress.AutoDetect
     ): void {
-      if (lcdAddress == 0) address = _autoDetectAddress();
+      if (lcdAddress == 0) address = _autoDetectAddressSimple();
       else address = lcdAddress;
       backlightControlValue = 8;
       registerSelectionValue = 0;
