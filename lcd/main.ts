@@ -36,7 +36,7 @@ namespace bplab {
     // LCD register setup
     function _setRegister(data: number) {
       pins.i2cWriteNumber(address, data, NumberFormat.Int8LE);
-      basic.pause(5);
+      basic.pause(1);
     }
 
     // Send data through I2C bus
@@ -255,7 +255,7 @@ namespace bplab {
     //% weight=61 blockGap=8
     //% help=github:pxt-bplab/lcd/README#lcd-shiftleft
     export function shiftLeft(): void {
-      _sendCommand(LCDCommand.ShiftDisplayLeft);
+        _sendCommand(LCDCommand.ShiftDisplayLeft);
     }
 
     /**
