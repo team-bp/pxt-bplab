@@ -1,6 +1,6 @@
 {
     "name": "bplab",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "MakeCode extensions created by BP Lab",
     "license": "MIT",
     "dependencies": {
